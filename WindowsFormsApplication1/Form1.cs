@@ -33,7 +33,7 @@ namespace WindowsFormsApplication1
             {
                 //xmlClients = XmlReader.Create("client.xml", new XmlReaderSettings());
                 //xmlClients = XmlReader.("client.xml", new XmlReaderSettings());
-                //dgsdgds
+                //helllo v2.1 kirill
                 xmlClients = XmlReader.Create(new StringReader(GET("http://localhost/docxml.php?file=client")));
                
                 dsClient = new DataSet();
