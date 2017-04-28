@@ -33,7 +33,7 @@ namespace WindowsFormsApplication1
             {
                 //xmlClients = XmlReader.Create("client.xml", new XmlReaderSettings());
                 //xmlClients = XmlReader.("client.xml", new XmlReaderSettings());
-                //dgsdgds
+                //helllo v2.1 kirill
                 xmlClients = XmlReader.Create(new StringReader(GET("http://localhost/docxml.php?file=client")));
                
                 dsClient = new DataSet();
@@ -173,6 +173,41 @@ namespace WindowsFormsApplication1
         {
             HelpNavigator navigator = HelpNavigator.TopicId;
             Help.ShowHelp (this, @"C:\Users\Кирилл\Documents\Visual Studio 2015\Projects\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\help.chm", navigator);
+        }
+
+        private void dataGridView1_MouseMove(object sender, MouseEventArgs e)
+        {
+            label1.Text = "Таблица для отображения информации о клинтах и акциях";
+        }
+
+        private void button1_MouseMove(object sender, MouseEventArgs e)
+        {
+            label1.Text = "Кнопка для вывода всех клиентов";
+        }
+
+        private void button2_MouseMove(object sender, MouseEventArgs e)
+        {
+            label1.Text = "Кнопка для вывода всех акций";
+        }
+
+        private void dataGridView2_MouseMove(object sender, MouseEventArgs e)
+        {
+            label1.Text = "Таблица для отображения информации владении акциями";
+        }
+
+        private void pictureBox1_MouseMove(object sender, MouseEventArgs e)
+        {
+            label1.Text = "Фото акционера";
+        }
+
+        private void Form1_MouseLeave(object sender, EventArgs e)
+        {
+            label1.Text = "Информационный блок";
+        }
+
+        private void Form1_HelpRequested(object sender, HelpEventArgs hlpevent)
+        {
+            System.Diagnostics.Process.Start(@"C:\Users\Кирилл\Documents\Visual Studio 2015\Projects\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\help.chm");
         }
     }
 }
